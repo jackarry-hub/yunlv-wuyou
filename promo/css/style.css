@@ -95,7 +95,7 @@ a {
 }
 
 .hero {
-  min-height: 350px;
+  min-height: 366px;
 }
 
 .brand-row {
@@ -202,14 +202,14 @@ a {
 }
 
 .title-calligraphy {
-  margin: 58px -12px 7px;
+  margin: 60px 6px 13px;
   line-height: 0;
   filter: none;
 }
 
 .title-calligraphy img {
   display: block;
-  width: 104%;
+  width: 94%;
   max-width: none;
   height: auto;
   object-fit: contain;
@@ -218,8 +218,8 @@ a {
 }
 
 .title-calligraphy::after {
-  left: 12px;
-  right: 18px;
+  left: 10px;
+  right: 42px;
   bottom: 5px;
 }
 
@@ -249,7 +249,7 @@ a {
 }
 
 .video-section {
-  margin-top: -88px;
+  margin-top: -76px;
 }
 
 .video-card {
@@ -561,7 +561,7 @@ a {
   }
 
   .hero {
-    min-height: 322px;
+    min-height: 344px;
   }
 
   .title {
@@ -570,11 +570,11 @@ a {
   }
 
   .title-calligraphy {
-    margin: 55px -11px 7px;
+    margin: 56px 4px 13px;
   }
 
   .video-section {
-    margin-top: -76px;
+    margin-top: -66px;
   }
 
   .primary-btn {
