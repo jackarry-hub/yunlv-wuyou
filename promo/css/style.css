@@ -118,28 +118,65 @@ a {
 
 .hand-note {
   position: absolute;
-  top: 55px;
-  right: 14px;
-  width: 196px;
+  top: 36px;
+  right: 10px;
+  width: 192px;
   color: #123f8b;
   font-family:
     "STXingkai",
     "Xingkai SC",
     "KaiTi",
     cursive;
-  font-size: 18px;
-  line-height: 1.26;
+  font-size: 16px;
+  line-height: 1.25;
   letter-spacing: 0;
-  transform: rotate(-7deg);
+  transform: rotate(-8deg);
   text-align: left;
   white-space: nowrap;
   opacity: 0.95;
 }
 
 .hand-note span {
+  display: block;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.hand-place {
+  margin-left: 22px;
+  font-size: 16px;
+  line-height: 1.12;
+}
+
+.hand-copy {
+  margin-top: 4px;
+  font-size: 15px;
+  line-height: 1.15;
+}
+
+.hand-copy i {
   display: inline-block;
-  border-bottom: 1.5px solid rgba(18, 63, 139, 0.7);
-  padding-bottom: 4px;
+  margin-left: 4px;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 0.7;
+  transform: translateY(2px) rotate(13deg);
+}
+
+.hand-curve {
+  display: block;
+  width: 160px;
+  height: 26px;
+  margin: -4px 0 0 16px;
+  overflow: visible;
+}
+
+.hand-curve path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .title {
@@ -554,10 +591,24 @@ a {
   }
 
   .hand-note {
-    top: 52px;
-    right: 8px;
-    width: 176px;
+  top: 36px;
+    right: 4px;
+    width: 178px;
     font-size: 16px;
+  }
+
+  .hand-place {
+    margin-left: 20px;
+    font-size: 15px;
+  }
+
+  .hand-copy {
+    font-size: 14px;
+  }
+
+  .hand-curve {
+    width: 150px;
+    margin-left: 14px;
   }
 
   .hero {
