@@ -1,0 +1,266 @@
+CREATE TABLE IF NOT EXISTS schema_migrations (
+  version VARCHAR(64) PRIMARY KEY,
+  applied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS app_state (
+  id VARCHAR(64) PRIMARY KEY,
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS users (
+  id VARCHAR(64) PRIMARY KEY,
+  phone VARCHAR(32),
+  nickname VARCHAR(80),
+  role VARCHAR(32),
+  avatar TEXT,
+  status VARCHAR(32),
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS elder_profiles (
+  id VARCHAR(64) PRIMARY KEY,
+  user_id VARCHAR(64),
+  name VARCHAR(80),
+  gender VARCHAR(16),
+  age INT,
+  city VARCHAR(80),
+  health_tags TEXT,
+  address TEXT,
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS family_contacts (
+  id VARCHAR(64) PRIMARY KEY,
+  elder_id VARCHAR(64),
+  name VARCHAR(80),
+  relation VARCHAR(32),
+  phone VARCHAR(32),
+  is_default TINYINT(1) DEFAULT 0,
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS guides (
+  id VARCHAR(64) PRIMARY KEY,
+  user_id VARCHAR(64),
+  real_name VARCHAR(80),
+  service_types TEXT,
+  area VARCHAR(120),
+  status VARCHAR(32),
+  online_status VARCHAR(32),
+  current_status VARCHAR(80),
+  rating DECIMAL(4,2) DEFAULT 0,
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS merchants (
+  id VARCHAR(64) PRIMARY KEY,
+  name VARCHAR(120),
+  type VARCHAR(80),
+  license VARCHAR(120),
+  contact VARCHAR(80),
+  phone VARCHAR(32),
+  address TEXT,
+  status VARCHAR(32),
+  rating DECIMAL(4,2) DEFAULT 0,
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS services (
+  id VARCHAR(64) PRIMARY KEY,
+  provider_type VARCHAR(32),
+  provider_id VARCHAR(64),
+  title VARCHAR(160),
+  category VARCHAR(80),
+  price DECIMAL(10,2) DEFAULT 0,
+  unit VARCHAR(32),
+  status VARCHAR(32),
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS activities (
+  id VARCHAR(64) PRIMARY KEY,
+  title VARCHAR(160),
+  category VARCHAR(80),
+  time VARCHAR(80),
+  location TEXT,
+  quota INT DEFAULT 0,
+  joined INT DEFAULT 0,
+  status VARCHAR(32),
+  cover TEXT,
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS devices (
+  id VARCHAR(64) PRIMARY KEY,
+  device_id VARCHAR(80),
+  type VARCHAR(80),
+  user_id VARCHAR(64),
+  battery INT DEFAULT 0,
+  online_status VARCHAR(32),
+  last_sync VARCHAR(80),
+  location TEXT,
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS health_records (
+  id VARCHAR(64) PRIMARY KEY,
+  elder_id VARCHAR(64),
+  metric_type VARCHAR(80),
+  label VARCHAR(120),
+  value VARCHAR(80),
+  unit VARCHAR(32),
+  status VARCHAR(32),
+  source VARCHAR(80),
+  recorded_at VARCHAR(80),
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS orders (
+  id VARCHAR(64) PRIMARY KEY,
+  order_no VARCHAR(64),
+  user_id VARCHAR(64),
+  elder_name VARCHAR(80),
+  service_type VARCHAR(120),
+  provider_type VARCHAR(32),
+  provider_id VARCHAR(64),
+  assignee_name VARCHAR(80),
+  status VARCHAR(32),
+  amount DECIMAL(10,2) DEFAULT 0,
+  time VARCHAR(80),
+  location TEXT,
+  source VARCHAR(80),
+  created_at VARCHAR(80),
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS tasks (
+  id VARCHAR(64) PRIMARY KEY,
+  task_no VARCHAR(64),
+  order_id VARCHAR(64),
+  assignee_type VARCHAR(32),
+  assignee_id VARCHAR(64),
+  assignee_name VARCHAR(80),
+  status VARCHAR(32),
+  dispatch_rule VARCHAR(120),
+  created_at VARCHAR(80),
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS alerts (
+  id VARCHAR(64) PRIMARY KEY,
+  elder_id VARCHAR(64),
+  elder_name VARCHAR(80),
+  type VARCHAR(80),
+  level VARCHAR(32),
+  location TEXT,
+  status VARCHAR(32),
+  description TEXT,
+  handled_by VARCHAR(80),
+  created_at VARCHAR(80),
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS messages (
+  id VARCHAR(64) PRIMARY KEY,
+  to_role VARCHAR(32),
+  title VARCHAR(160),
+  content TEXT,
+  read_status TINYINT(1) DEFAULT 0,
+  created_at VARCHAR(80),
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS ai_chats (
+  id VARCHAR(64) PRIMARY KEY,
+  user_id VARCHAR(64),
+  question TEXT,
+  answer TEXT,
+  intent VARCHAR(80),
+  created_at VARCHAR(80),
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS audit_logs (
+  id VARCHAR(64) PRIMARY KEY,
+  actor VARCHAR(80),
+  action VARCHAR(160),
+  target VARCHAR(160),
+  result VARCHAR(80),
+  created_at VARCHAR(80),
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS reviews (
+  id VARCHAR(64) PRIMARY KEY,
+  order_id VARCHAR(64),
+  order_no VARCHAR(64),
+  provider_type VARCHAR(32),
+  provider_id VARCHAR(64),
+  assignee_name VARCHAR(80),
+  rating DECIMAL(4,2) DEFAULT 0,
+  content TEXT,
+  created_at VARCHAR(80),
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS ui_actions (
+  id VARCHAR(64) PRIMARY KEY,
+  role VARCHAR(32),
+  route VARCHAR(120),
+  action VARCHAR(160),
+  created_at VARCHAR(80),
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS activity_signups (
+  id VARCHAR(64) PRIMARY KEY,
+  activity_id VARCHAR(64),
+  user_id VARCHAR(64),
+  elder_name VARCHAR(80),
+  gender VARCHAR(16),
+  age INT DEFAULT 0,
+  phone VARCHAR(32),
+  count INT DEFAULT 1,
+  status VARCHAR(32),
+  created_at VARCHAR(80),
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS service_requests (
+  id VARCHAR(64) PRIMARY KEY,
+  request_no VARCHAR(64),
+  role VARCHAR(32),
+  user_id VARCHAR(64),
+  elder_name VARCHAR(80),
+  route VARCHAR(120),
+  action VARCHAR(160),
+  type VARCHAR(80),
+  provider_type VARCHAR(32),
+  status VARCHAR(32),
+  priority VARCHAR(32),
+  description TEXT,
+  created_at VARCHAR(80),
+  handled_by VARCHAR(80),
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "家属绑定",
+  "usingComponents": {
+    "yl-user-reference-page": "../../components/YlUserReferencePage"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "紧急联系人",
+  "usingComponents": {
+    "yl-user-reference-page": "../../components/YlUserReferencePage"
+  }
+}

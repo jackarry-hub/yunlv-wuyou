@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "接单大厅",
+  "usingComponents": {
+    "yl-primary-button": "../../components/YlPrimaryButton",
+    "yl-card": "../../components/YlCard",
+    "yl-order-card": "../../components/YlOrderCard",
+    "yl-page": "../../components/YlPage"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "申请开票",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

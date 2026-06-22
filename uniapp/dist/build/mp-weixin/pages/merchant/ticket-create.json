@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "提交问题工单",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

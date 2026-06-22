@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "排班编辑",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

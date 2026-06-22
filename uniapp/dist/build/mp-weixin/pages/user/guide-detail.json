@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "向导详情",
+  "usingComponents": {
+    "yl-user-reference-page": "../../components/YlUserReferencePage"
+  }
+}

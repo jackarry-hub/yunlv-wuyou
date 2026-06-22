@@ -1,0 +1,992 @@
+{
+  "meta": {
+    "project": "云旅无忧 AI 智慧旅居平台",
+    "seedVersion": "2026-06-01-mvp",
+    "city": "昆明",
+    "mvpBoundary": "真实硬件、支付、短信、地图导航和大模型调用均采用模拟数据或接口预留。"
+  },
+  "users": [
+    {
+      "id": "user-001",
+      "phone": "13800005678",
+      "nickname": "李奶奶",
+      "role": "elder",
+      "avatar": "/user/assets/avatar-user.jpg",
+      "currentCity": "昆明",
+      "address": "昆明市五华区翠湖康养公寓 3 栋 1208",
+      "personalAuthorizations": {
+        "location": true,
+        "healthData": true,
+        "notifications": true
+      },
+      "familySharing": {
+        "healthData": true,
+        "deviceAlerts": true,
+        "serviceOrders": true,
+        "emergencyLocation": true
+      },
+      "status": "正常"
+    },
+    {
+      "id": "family-001",
+      "phone": "13900001234",
+      "nickname": "李女士",
+      "role": "family",
+      "avatar": "/user/assets/avatar-daughter.jpg",
+      "status": "正常"
+    },
+    {
+      "id": "guide-user-001",
+      "phone": "13600008888",
+      "nickname": "王芳",
+      "role": "guide",
+      "avatar": "/guide/assets/guide-avatar-li.png",
+      "status": "正常"
+    },
+    {
+      "id": "merchant-user-001",
+      "phone": "13700006666",
+      "nickname": "云康护理中心",
+      "role": "merchant",
+      "avatar": "/merchant/assets/brand-logo.png",
+      "status": "正常"
+    },
+    {
+      "id": "admin-001",
+      "phone": "13500009999",
+      "nickname": "平台管理员",
+      "role": "admin",
+      "avatar": "/user/assets/home-logo-ref.png",
+      "status": "正常"
+    }
+  ],
+  "elderProfile": {
+    "id": "elder-001",
+    "userId": "user-001",
+    "name": "李秀兰",
+    "gender": "女",
+    "age": 72,
+    "city": "昆明",
+    "address": "昆明市五华区翠湖康养公寓 3 栋 1208",
+    "healthTags": [
+      "高血压",
+      "轻度糖尿病",
+      "膝关节术后康复"
+    ],
+    "dietPreference": "清淡少盐",
+    "mobility": "稳定慢行，可自行活动",
+    "idVerificationStatus": "已认证",
+    "bloodType": "A 型",
+    "allergies": "青霉素过敏",
+    "medicines": "硝苯地平控释片、二甲双胍",
+    "riskLevel": "低风险",
+    "medicalPreference": "优先三甲医院，需陪同就诊",
+    "emergencyHistory": "2021年曾因高血压住院治疗",
+    "familyNote": "平时注意控制饮食和情绪，定期监测血压",
+    "medicationReminders": [
+      {
+        "id": "medication-morning",
+        "period": "早",
+        "time": "08:00",
+        "medicines": ["氨氯地平片 5mg", "阿司匹林肠溶片 100mg"],
+        "status": "已提醒",
+        "enabled": true
+      },
+      {
+        "id": "medication-evening",
+        "period": "晚",
+        "time": "20:00",
+        "medicines": ["缬沙坦片 80mg"],
+        "status": "已提醒",
+        "enabled": true
+      }
+    ]
+  },
+  "userProfileCenter": {
+    "travelPlans": [
+      {
+        "id": "travel-plan-001",
+        "userId": "user-001",
+        "destinationKey": "kunmingApartment",
+        "name": "昆明翠湖康养公寓",
+        "status": "当前旅居中",
+        "startDate": "2026-06-01",
+        "endDate": "2026-06-30",
+        "apartment": "翠湖公寓 3 栋 1208",
+        "manager": "小云机器人",
+        "address": "昆明市五华区翠湖康养公寓",
+        "image": "destination-city.jpg"
+      },
+      {
+        "id": "travel-plan-002",
+        "userId": "user-001",
+        "destinationKey": "mile",
+        "name": "弥勒湖泉康养社区",
+        "status": "待入住",
+        "startDate": "2026-07-10",
+        "endDate": "2026-08-09",
+        "apartment": "湖景 A 栋",
+        "manager": "平台旅居管家",
+        "address": "弥勒市湖泉生态园片区",
+        "image": "profile-plan.jpg"
+      },
+      {
+        "id": "travel-plan-003",
+        "userId": "user-001",
+        "destinationKey": "dali",
+        "name": "大理洱海慢居社区",
+        "status": "已完成",
+        "startDate": "2026-03-05",
+        "endDate": "2026-03-28",
+        "apartment": "洱海庭院 6 号房",
+        "manager": "大理旅居管家",
+        "address": "大理市洱海生态廊道北段",
+        "image": "destination-dali.jpg"
+      }
+    ],
+    "coupons": [
+      {
+        "id": "coupon-001",
+        "name": "旅居服务满减券",
+        "benefit": "满 3000 减 100",
+        "scope": "旅居服务订单",
+        "expiresAt": "2026-09-30",
+        "status": "可用"
+      },
+      {
+        "id": "coupon-002",
+        "name": "健康服务折扣券",
+        "benefit": "健康服务 9 折",
+        "scope": "健康服务",
+        "expiresAt": "2026-10-15",
+        "status": "可用"
+      },
+      {
+        "id": "coupon-003",
+        "name": "活动体验券",
+        "benefit": "文化体验活动免费 1 次",
+        "scope": "文化体验活动",
+        "expiresAt": "2026-11-01",
+        "status": "可用"
+      }
+    ],
+    "points": {
+      "balance": 860,
+      "monthlyEarned": 120,
+      "ledger": [
+        { "id": "points-001", "title": "完成旅居服务评价", "change": 50, "createdAt": "2026-06-15 11:20" },
+        { "id": "points-002", "title": "参加康养活动", "change": 40, "createdAt": "2026-06-08 09:10" },
+        { "id": "points-003", "title": "每日健康打卡", "change": 30, "createdAt": "2026-06-03 08:30" }
+      ]
+    },
+    "membership": {
+      "level": "旅居会员",
+      "status": "有效",
+      "expiresAt": "2027-05-19",
+      "benefits": ["专属客服优先响应", "健康服务折扣", "活动报名优先名额"]
+    }
+  },
+  "familyContacts": [
+    {
+      "id": "contact-001",
+      "elderId": "elder-001",
+      "name": "李女士",
+      "relation": "女儿",
+      "phone": "13900001234",
+      "isDefault": true,
+      "notifyAlert": true,
+      "bindingStatus": "已绑定",
+      "boundAt": "2026-05-26 09:10",
+      "lastInteractionAt": "2026-06-18 10:30",
+      "familyPermissions": {
+        "healthData": true,
+        "deviceAlerts": true,
+        "serviceOrders": true,
+        "emergencyLocation": true
+      }
+    },
+    {
+      "id": "contact-002",
+      "elderId": "elder-001",
+      "name": "周先生",
+      "relation": "女婿",
+      "phone": "13800004321",
+      "isDefault": false,
+      "notifyAlert": true,
+      "bindingStatus": "已绑定",
+      "boundAt": "2026-05-20 18:22",
+      "lastInteractionAt": "2026-06-17 19:05",
+      "familyPermissions": {
+        "healthData": true,
+        "deviceAlerts": true,
+        "serviceOrders": false,
+        "emergencyLocation": true
+      }
+    }
+  ],
+  "guides": [
+    {
+      "id": "guide-001",
+      "userId": "guide-user-001",
+      "realName": "王芳",
+      "serviceTypes": [
+        "陪伴就医",
+        "生活陪伴",
+        "接送出行"
+      ],
+      "area": "昆明市五华区",
+      "status": "已认证",
+      "onlineStatus": "在线",
+      "currentStatus": "空闲中",
+      "rating": 4.9,
+      "monthlyOrders": 28,
+      "incomeToday": 320,
+      "distanceKm": 1.8
+    },
+    {
+      "id": "guide-002",
+      "userId": "guide-user-002",
+      "realName": "张小明",
+      "serviceTypes": [
+        "导游游览",
+        "旅拍陪同",
+        "活动陪伴"
+      ],
+      "area": "昆明市西山区",
+      "status": "已认证",
+      "onlineStatus": "在线",
+      "currentStatus": "接单中",
+      "rating": 5,
+      "monthlyOrders": 31,
+      "incomeToday": 460,
+      "distanceKm": 3.4
+    },
+    {
+      "id": "guide-003",
+      "userId": "guide-user-003",
+      "realName": "陈丹姨",
+      "serviceTypes": [
+        "生活陪伴",
+        "帮办代办"
+      ],
+      "area": "昆明市官渡区",
+      "status": "待复审",
+      "onlineStatus": "离线",
+      "currentStatus": "休息中",
+      "rating": 4.6,
+      "monthlyOrders": 15,
+      "incomeToday": 0,
+      "distanceKm": 6.2
+    }
+  ],
+  "merchants": [
+    {
+      "id": "merchant-001",
+      "name": "云康护理中心",
+      "type": "康养护理",
+      "license": "YLYY-2026-0001",
+      "contact": "刘主管",
+      "phone": "0871-88886666",
+      "address": "昆明市盘龙区白塔路 88 号",
+      "businessHours": "09:00-21:00",
+      "serviceCity": "云南省 昆明市",
+      "intro": "专业护理团队，提供居家护理、陪诊服务、康复理疗等服务。",
+      "storePhotos": [
+        {
+          "id": "store-photo-front",
+          "title": "门店前台",
+          "src": "/merchant/assets/store-front.png",
+          "isCover": true
+        },
+        {
+          "id": "store-photo-room",
+          "title": "护理室",
+          "src": "/merchant/assets/store-room.png",
+          "isCover": false
+        },
+        {
+          "id": "store-photo-wall",
+          "title": "营业执照墙",
+          "src": "/merchant/assets/store-wall.png",
+          "isCover": false
+        },
+        {
+          "id": "store-photo-team",
+          "title": "服务人员合照",
+          "src": "/merchant/assets/store-team.png",
+          "isCover": false
+        },
+        {
+          "id": "store-photo-rehab",
+          "title": "康复设备",
+          "src": "/merchant/assets/store-rehab.png",
+          "isCover": false
+        }
+      ],
+      "status": "已通过",
+      "onlineAccepting": true,
+      "onlineStatus": "在线接单中",
+      "rating": 4.8,
+      "settlementPending": 12860
+    },
+    {
+      "id": "merchant-002",
+      "name": "滇池康复门诊",
+      "type": "医疗卫生",
+      "license": "MLWS-2026-0321",
+      "contact": "赵医生",
+      "phone": "0871-66668888",
+      "address": "昆明市西山区海埂路 16 号",
+      "status": "待审核",
+      "onlineAccepting": false,
+      "onlineStatus": "暂停接单",
+      "rating": 4.7,
+      "settlementPending": 6800
+    }
+  ],
+  "services": [
+    {
+      "id": "service-001",
+      "providerType": "guide",
+      "providerId": "guide-001",
+      "title": "陪伴就医",
+      "category": "轻服务",
+      "price": 120,
+      "unit": "次",
+      "status": "上架",
+      "description": "挂号取号、陪同就诊、检查缴费、取药协助。"
+    },
+    {
+      "id": "service-002",
+      "providerType": "guide",
+      "providerId": "guide-002",
+      "title": "导游游览",
+      "category": "轻服务",
+      "price": 160,
+      "unit": "半日",
+      "status": "上架",
+      "description": "景点讲解、路线规划、拍照陪同。"
+    },
+    {
+      "id": "service-003",
+      "providerType": "merchant",
+      "providerId": "merchant-001",
+      "title": "上门护理评估",
+      "category": "康养护理",
+      "price": 260,
+      "unit": "次",
+      "status": "上架",
+      "description": "护理等级评估、慢病照护建议、康复计划沟通。"
+    },
+    {
+      "id": "service-004",
+      "providerType": "merchant",
+      "providerId": "merchant-001",
+      "title": "中医理疗推拿",
+      "category": "康养护理",
+      "price": 180,
+      "unit": "次",
+      "status": "上架",
+      "description": "专业中医师推拿按摩，舒缓筋骨、调理气血。"
+    },
+    {
+      "id": "service-005",
+      "providerType": "merchant",
+      "providerId": "merchant-001",
+      "title": "营养膳食定制",
+      "category": "生活服务",
+      "price": 120,
+      "unit": "日",
+      "status": "上架",
+      "description": "根据健康档案定制每日营养餐食，配送上门。"
+    },
+    {
+      "id": "service-006",
+      "providerType": "merchant",
+      "providerId": "merchant-001",
+      "title": "居家保洁服务",
+      "category": "生活服务",
+      "price": 150,
+      "unit": "次",
+      "status": "待审核",
+      "description": "专业保洁人员上门清洁，适老化深度清理。"
+    },
+    {
+      "id": "service-007",
+      "providerType": "merchant",
+      "providerId": "merchant-001",
+      "title": "康复训练指导",
+      "category": "康养护理",
+      "price": 200,
+      "unit": "次",
+      "status": "已下架",
+      "description": "康复师一对一指导，肢体功能恢复训练。"
+    }
+  ],
+  "activities": [
+    {
+      "id": "activity-001",
+      "title": "晨练太极健康课",
+      "category": "康养健身",
+      "time": "2026-06-06 07:30",
+      "location": "湖泉生态园亲水广场",
+      "coordinates": {
+        "lng": 103.4148,
+        "lat": 24.4105
+      },
+      "quota": 40,
+      "joined": 28,
+      "status": "报名中",
+      "cover": "/user/assets/activity-taiji.jpg"
+    },
+    {
+      "id": "activity-002",
+      "title": "书画交流会",
+      "category": "文化体验",
+      "time": "2026-06-06 14:00",
+      "location": "弥勒市老年大学活动室",
+      "coordinates": {
+        "lng": 103.4233,
+        "lat": 24.4086
+      },
+      "quota": 30,
+      "joined": 16,
+      "status": "报名中",
+      "cover": "/user/assets/activity-calligraphy.jpg"
+    },
+    {
+      "id": "activity-003",
+      "title": "湖泉傍晚音乐会",
+      "category": "休闲娱乐",
+      "time": "2026-06-07 18:30",
+      "location": "湖泉半山温泉草坪",
+      "coordinates": {
+        "lng": 103.4085,
+        "lat": 24.4006
+      },
+      "quota": 60,
+      "joined": 32,
+      "status": "报名中",
+      "cover": "/user/assets/activity-music.jpg"
+    },
+    {
+      "id": "activity-004",
+      "title": "东风韵自然慢行",
+      "category": "自然观光",
+      "time": "2026-06-08 09:00",
+      "location": "东风韵景区游客中心",
+      "coordinates": {
+        "lng": 103.3608,
+        "lat": 24.3645
+      },
+      "quota": 36,
+      "joined": 22,
+      "status": "报名中",
+      "cover": "/user/assets/community-feed-path-ref.png"
+    },
+    {
+      "id": "activity-005",
+      "title": "健康饮食讲座",
+      "category": "学习讲座",
+      "time": "2026-06-08 15:00",
+      "location": "弥勒市康养服务中心",
+      "coordinates": {
+        "lng": 103.432,
+        "lat": 24.414
+      },
+      "quota": 50,
+      "joined": 18,
+      "status": "报名中",
+      "cover": "/user/assets/health-hero.jpg"
+    },
+    {
+      "id": "activity-006",
+      "title": "非遗陶艺体验",
+      "category": "文化体验",
+      "time": "2026-06-09 10:00",
+      "location": "可邑小镇非遗工坊",
+      "coordinates": {
+        "lng": 103.479,
+        "lat": 24.4552
+      },
+      "quota": 24,
+      "joined": 11,
+      "status": "报名中",
+      "cover": "/user/assets/activity-signup-hero.jpg"
+    }
+  ],
+  "devices": [
+    {
+      "id": "device-001",
+      "deviceId": "BAND-LX05-33892",
+      "type": "智能手环",
+      "userId": "user-001",
+      "battery": 78,
+      "onlineStatus": "在线",
+      "lastSync": "2026-06-01 10:31",
+      "location": "昆明市五华区翠湖康养公寓",
+      "guardianSettings": {
+        "vitalSigns": true
+      }
+    },
+    {
+      "id": "device-002",
+      "deviceId": "ROBOT-XY-V32-1024",
+      "type": "小云机器人",
+      "userId": "user-001",
+      "battery": 96,
+      "onlineStatus": "在线",
+      "lastSync": "2026-06-01 10:28",
+      "location": "客厅",
+      "networkStatus": "良好",
+      "voiceVolume": 65,
+      "deviceStatus": "正常运行",
+      "guardianSettings": {
+        "fallDetection": true,
+        "abnormalDetection": true,
+        "awayReminder": true,
+        "medicineReminder": true,
+        "sosCall": true
+      }
+    },
+    {
+      "id": "device-003",
+      "deviceId": "BP-610-5531",
+      "type": "智能血压计",
+      "userId": "user-001",
+      "battery": 52,
+      "onlineStatus": "离线",
+      "lastSync": "2026-05-31 19:50",
+      "location": "卧室"
+    }
+  ],
+  "healthRecords": [
+    {
+      "id": "health-001",
+      "elderId": "elder-001",
+      "metricType": "heart_rate",
+      "label": "心率",
+      "value": 76,
+      "unit": "次/分",
+      "status": "正常",
+      "source": "智能手环",
+      "recordedAt": "2026-06-01 10:30"
+    },
+    {
+      "id": "health-002",
+      "elderId": "elder-001",
+      "metricType": "blood_pressure",
+      "label": "血压",
+      "value": "128/82",
+      "unit": "mmHg",
+      "status": "正常",
+      "source": "智能血压计",
+      "recordedAt": "2026-06-01 08:10"
+    },
+    {
+      "id": "health-003",
+      "elderId": "elder-001",
+      "metricType": "blood_oxygen",
+      "label": "血氧",
+      "value": 97,
+      "unit": "%",
+      "status": "正常",
+      "source": "智能手环",
+      "recordedAt": "2026-06-01 10:30"
+    },
+    {
+      "id": "health-004",
+      "elderId": "elder-001",
+      "metricType": "sleep",
+      "label": "睡眠",
+      "value": 6.8,
+      "unit": "小时",
+      "status": "轻度不足",
+      "source": "小云机器人",
+      "recordedAt": "2026-06-01 07:20"
+    },
+    {
+      "id": "health-005",
+      "elderId": "elder-001",
+      "metricType": "steps",
+      "label": "步数",
+      "value": 6850,
+      "unit": "步",
+      "status": "目标 8000 步",
+      "source": "智能手环",
+      "recordedAt": "2026-06-01 10:31"
+    }
+  ],
+  "orders": [
+    {
+      "id": "order-001",
+      "orderNo": "DD20260601001",
+      "userId": "user-001",
+      "elderName": "李秀兰",
+      "serviceType": "陪伴就医",
+      "providerType": "guide",
+      "providerId": "guide-001",
+      "assigneeName": "王芳",
+      "status": "服务中",
+      "amount": 120,
+      "time": "2026-06-01 15:00",
+      "location": "昆明市第一人民医院",
+      "source": "用户端",
+      "note": "膝关节复查，请协助取号和缴费。",
+      "createdAt": "2026-06-01 09:12",
+      "timeline": [
+        {
+          "time": "2026-06-01 14:58",
+          "status": "服务中",
+          "text": "向导已到达医院并开始服务"
+        },
+        {
+          "time": "2026-06-01 09:18",
+          "status": "已接单",
+          "text": "王芳已接单"
+        },
+        {
+          "time": "2026-06-01 09:12",
+          "status": "待派单",
+          "text": "用户提交陪伴就医订单"
+        }
+      ]
+    },
+    {
+      "id": "order-002",
+      "orderNo": "DD20260601002",
+      "userId": "user-001",
+      "elderName": "李秀兰",
+      "serviceType": "上门护理评估",
+      "providerType": "merchant",
+      "providerId": "merchant-001",
+      "assigneeName": "云康护理中心",
+      "status": "待确认",
+      "amount": 260,
+      "time": "2026-06-02 10:00",
+      "location": "翠湖康养公寓",
+      "source": "商户端",
+      "note": "评估膝关节康复护理方案。",
+      "createdAt": "2026-06-01 10:02",
+      "timeline": [
+        {
+          "time": "2026-06-01 10:06",
+          "status": "待确认",
+          "text": "商户已确认预约并回传方案"
+        },
+        {
+          "time": "2026-06-01 10:02",
+          "status": "待派单",
+          "text": "用户提交护理评估预约"
+        }
+      ]
+    },
+    {
+      "id": "order-003",
+      "orderNo": "DD20260601003",
+      "userId": "user-001",
+      "elderName": "李秀兰",
+      "serviceType": "导游游览",
+      "providerType": "guide",
+      "providerId": null,
+      "assigneeName": "",
+      "status": "待派单",
+      "amount": 160,
+      "time": "2026-06-03 09:30",
+      "location": "海埂公园",
+      "source": "用户端",
+      "note": "半日游览，需要节奏慢一些。",
+      "createdAt": "2026-06-01 10:21",
+      "timeline": [
+        {
+          "time": "2026-06-01 10:21",
+          "status": "待派单",
+          "text": "用户提交导游游览订单"
+        }
+      ]
+    },
+    {
+      "id": "order-004",
+      "orderNo": "DD20260601004",
+      "userId": "user-001",
+      "elderName": "李秀兰",
+      "serviceType": "居家护理服务",
+      "providerType": "merchant",
+      "providerId": "merchant-001",
+      "assigneeName": "云康护理中心",
+      "status": "已派单",
+      "amount": 268,
+      "time": "2026-06-03 09:30",
+      "location": "昆明市盘龙区穿金路88号",
+      "source": "用户端",
+      "note": "测试多端互通：商户端确认预约。",
+      "createdAt": "2026-06-01 11:00",
+      "timeline": [
+        {
+          "time": "2026-06-01 11:02",
+          "status": "已派单",
+          "text": "后台已派单给云康护理中心"
+        },
+        {
+          "time": "2026-06-01 11:00",
+          "status": "待派单",
+          "text": "用户提交居家护理预约"
+        }
+      ]
+    },
+    {
+      "id": "order-005",
+      "orderNo": "DD20260601005",
+      "userId": "user-001",
+      "elderName": "李秀兰",
+      "serviceType": "康复护理方案",
+      "providerType": "merchant",
+      "providerId": "merchant-001",
+      "assigneeName": "云康护理中心",
+      "status": "已派单",
+      "amount": 198,
+      "time": "2026-06-03 14:00",
+      "location": "昆明市五华区青年路123号",
+      "source": "用户端",
+      "note": "测试多端互通：商户端提交报价。",
+      "createdAt": "2026-06-01 11:10",
+      "timeline": [
+        {
+          "time": "2026-06-01 11:12",
+          "status": "已派单",
+          "text": "后台已派单给云康护理中心"
+        },
+        {
+          "time": "2026-06-01 11:10",
+          "status": "待派单",
+          "text": "用户提交康复护理需求"
+        }
+      ]
+    },
+    {
+      "id": "order-006",
+      "orderNo": "DD20260601006",
+      "userId": "user-001",
+      "elderName": "李秀兰",
+      "serviceType": "上门照护服务",
+      "providerType": "merchant",
+      "providerId": "merchant-001",
+      "assigneeName": "云康护理中心",
+      "status": "待服务",
+      "amount": 320,
+      "time": "2026-06-03 16:00",
+      "location": "翠湖康养公寓",
+      "source": "用户端",
+      "note": "测试多端互通：商户端完成服务。",
+      "createdAt": "2026-06-01 11:20",
+      "timeline": [
+        {
+          "time": "2026-06-01 11:25",
+          "status": "待服务",
+          "text": "商户已确认预约，等待上门服务"
+        },
+        {
+          "time": "2026-06-01 11:20",
+          "status": "待派单",
+          "text": "用户提交上门照护服务"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-001",
+      "taskNo": "TASK20260601001",
+      "orderId": "order-001",
+      "assigneeType": "guide",
+      "assigneeId": "guide-001",
+      "assigneeName": "王芳",
+      "status": "服务中",
+      "dispatchRule": "距离优先 + 评分优先",
+      "createdAt": "2026-06-01 09:13",
+      "updatedAt": "2026-06-01 14:58"
+    },
+    {
+      "id": "task-002",
+      "taskNo": "TASK20260601002",
+      "orderId": "order-002",
+      "assigneeType": "merchant",
+      "assigneeId": "merchant-001",
+      "assigneeName": "云康护理中心",
+      "status": "待确认",
+      "dispatchRule": "服务类型匹配 + 资质优先",
+      "createdAt": "2026-06-01 10:03",
+      "updatedAt": "2026-06-01 10:06"
+    },
+    {
+      "id": "task-004",
+      "taskNo": "TASK20260601004",
+      "orderId": "order-004",
+      "assigneeType": "merchant",
+      "assigneeId": "merchant-001",
+      "assigneeName": "云康护理中心",
+      "status": "待接单",
+      "dispatchRule": "服务类型匹配 + 资质优先",
+      "createdAt": "2026-06-01 11:02",
+      "updatedAt": "2026-06-01 11:02"
+    },
+    {
+      "id": "task-005",
+      "taskNo": "TASK20260601005",
+      "orderId": "order-005",
+      "assigneeType": "merchant",
+      "assigneeId": "merchant-001",
+      "assigneeName": "云康护理中心",
+      "status": "待接单",
+      "dispatchRule": "服务类型匹配 + 资质优先",
+      "createdAt": "2026-06-01 11:12",
+      "updatedAt": "2026-06-01 11:12"
+    },
+    {
+      "id": "task-006",
+      "taskNo": "TASK20260601006",
+      "orderId": "order-006",
+      "assigneeType": "merchant",
+      "assigneeId": "merchant-001",
+      "assigneeName": "云康护理中心",
+      "status": "待服务",
+      "dispatchRule": "服务类型匹配 + 资质优先",
+      "createdAt": "2026-06-01 11:22",
+      "updatedAt": "2026-06-01 11:25"
+    }
+  ],
+  "alerts": [
+    {
+      "id": "alert-001",
+      "elderId": "elder-001",
+      "elderName": "李秀兰",
+      "type": "设备离线",
+      "level": "中",
+      "location": "翠湖康养公寓",
+      "status": "待处理",
+      "description": "智能血压计超过 12 小时未同步。",
+      "createdAt": "2026-06-01 09:50",
+      "handledBy": ""
+    },
+    {
+      "id": "alert-002",
+      "elderId": "elder-001",
+      "elderName": "李秀兰",
+      "type": "睡眠不足",
+      "level": "低",
+      "location": "卧室",
+      "status": "处理中",
+      "description": "近三日平均睡眠低于 7 小时。",
+      "createdAt": "2026-06-01 07:20",
+      "handledBy": "客服小陈"
+    }
+  ],
+  "messages": [
+    {
+      "id": "message-001",
+      "toRole": "user",
+      "title": "陪伴就医服务进行中",
+      "content": "王芳已到达昆明市第一人民医院并开始服务。",
+      "read": false,
+      "createdAt": "2026-06-01 14:58"
+    },
+    {
+      "id": "message-002",
+      "toRole": "admin",
+      "title": "设备离线待处理",
+      "content": "智能血压计超过 12 小时未同步，请联系老人或家属确认。",
+      "read": false,
+      "createdAt": "2026-06-01 09:50"
+    }
+  ],
+  "aiHistory": [
+    {
+      "id": "chat-001",
+      "userId": "user-001",
+      "question": "今天附近有什么适合参加的活动？",
+      "answer": "今天推荐晨练太极健康课和书画交流会，距离较近、节奏平缓。您可以在活动地图中查看位置并报名。",
+      "intent": "activity_recommendation",
+      "createdAt": "2026-06-01 09:40"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "audit-001",
+      "actor": "平台管理员",
+      "action": "派单",
+      "target": "DD20260601001",
+      "result": "成功",
+      "createdAt": "2026-06-01 09:13",
+      "ip": "127.0.0.1"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "review-9001",
+      "orderId": "order-002",
+      "orderNo": "DD20260601002",
+      "providerType": "merchant",
+      "providerId": "merchant-001",
+      "assigneeName": "云康护理中心",
+      "rating": 5,
+      "content": "护理评估细致，方案说明清楚，适合继续预约康复护理。",
+      "tags": [
+        "服务细致",
+        "响应及时"
+      ],
+      "createdAt": "2026-06-02 11:20"
+    }
+  ],
+  "uiActions": [],
+  "activitySignups": [
+    {
+      "id": "signup-11001",
+      "activityId": "activity-001",
+      "userId": "user-001",
+      "elderName": "李秀兰",
+      "gender": "女",
+      "age": 72,
+      "phone": "13800005678",
+      "count": 1,
+      "status": "已报名",
+      "createdAt": "2026-06-01 11:05"
+    }
+  ],
+  "serviceRequests": [
+    {
+      "id": "req-12001",
+      "requestNo": "REQ13001",
+      "role": "user",
+      "userId": "user-001",
+      "elderName": "李秀兰",
+      "route": "community",
+      "action": "申请社群协助",
+      "type": "社群交流",
+      "providerType": "guide",
+      "status": "待处理",
+      "priority": "P1",
+      "description": "希望加入附近晨练社群，由平台协助推荐联系人。",
+      "payload": {
+        "source": "首页功能宫格",
+        "targetRoute": "community"
+      },
+      "createdAt": "2026-06-01 11:12",
+      "handledBy": ""
+    }
+  ],
+  "counters": {
+    "order": 1003,
+    "task": 2002,
+    "alert": 3002,
+    "message": 4002,
+    "service": 5003,
+    "chat": 6001,
+    "audit": 7001,
+    "device": 8003,
+    "review": 9001,
+    "uiAction": 10000,
+    "activitySignup": 11001,
+    "serviceRequest": 12001,
+    "serviceRequestNo": 13001
+  }
+}

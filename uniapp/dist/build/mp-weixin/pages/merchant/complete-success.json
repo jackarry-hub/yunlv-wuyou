@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "完成上报成功",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

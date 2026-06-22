@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "商户登录",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

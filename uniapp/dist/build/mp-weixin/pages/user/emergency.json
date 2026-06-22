@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "紧急求助",
+  "usingComponents": {
+    "yl-card": "../../components/YlCard",
+    "yl-page": "../../components/YlPage"
+  }
+}

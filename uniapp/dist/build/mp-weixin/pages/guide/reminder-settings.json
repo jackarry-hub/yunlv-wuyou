@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "接单提醒设置",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

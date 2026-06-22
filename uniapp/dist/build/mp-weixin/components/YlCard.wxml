@@ -1,0 +1,1 @@
+<view class="yl-card data-v-9d8355db"><view wx:if="{{a}}" class="yl-card__head data-v-9d8355db"><text wx:if="{{b}}" class="yl-card__title data-v-9d8355db">{{c}}</text><slot name="action"/></view><slot/></view>

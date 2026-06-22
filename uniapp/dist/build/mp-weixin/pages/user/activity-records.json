@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "活动记录",
+  "usingComponents": {
+    "yl-user-reference-page": "../../components/YlUserReferencePage"
+  }
+}

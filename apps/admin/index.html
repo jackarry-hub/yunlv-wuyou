@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>云旅无忧管理后台</title>
+    <link rel="stylesheet" href="/shared/styles.css?v=20260610-admin-pagination" />
+    <script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script type="module" src="/admin/app.js?v=20260610-admin-pagination"></script>
+  </head>
+  <body>
+    <div class="role-shell">
+      <header class="app-top">
+        <a class="brand-mini" href="/">
+          <span class="brand-mark">云</span>
+          <span>
+            <strong>云旅无忧</strong>
+            <span>管理后台</span>
+          </span>
+        </a>
+        <nav class="role-links" aria-label="管理后台导航">
+          <span class="icon-link active" aria-current="page"><i data-lucide="monitor-cog"></i>后台</span>
+        </nav>
+      </header>
+      <main id="app" class="app-main" aria-live="polite"></main>
+    </div>
+    <div class="toast" data-toast></div>
+  </body>
+</html>

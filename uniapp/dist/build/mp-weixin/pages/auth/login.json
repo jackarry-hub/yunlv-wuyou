@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "云旅无忧登录",
+  "usingComponents": {
+    "yl-status-pill": "../../components/YlStatusPill",
+    "yl-card": "../../components/YlCard",
+    "yl-primary-button": "../../components/YlPrimaryButton",
+    "yl-page": "../../components/YlPage"
+  }
+}

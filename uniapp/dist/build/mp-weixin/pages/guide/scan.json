@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "扫一扫",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

@@ -1,0 +1,3 @@
+<template>
+  <YlRoleReferencePage role="merchant" page-id="onboarding-review" />
+</template>

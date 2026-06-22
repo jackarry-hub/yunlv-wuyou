@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "服务中",
+  "usingComponents": {
+    "yl-primary-button": "../../components/YlPrimaryButton",
+    "yl-order-card": "../../components/YlOrderCard",
+    "yl-card": "../../components/YlCard",
+    "yl-page": "../../components/YlPage"
+  }
+}

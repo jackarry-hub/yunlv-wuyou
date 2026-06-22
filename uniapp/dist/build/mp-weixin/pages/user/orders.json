@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的订单",
+  "usingComponents": {
+    "yl-primary-button": "../../components/YlPrimaryButton",
+    "yl-order-card": "../../components/YlOrderCard",
+    "yl-card": "../../components/YlCard",
+    "yl-page": "../../components/YlPage"
+  }
+}

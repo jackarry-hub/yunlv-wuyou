@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content" />
+    <title>云旅无忧向导端</title>
+    <script>
+      document.documentElement.dataset.display = location.pathname.startsWith("/prototype/") ? "prototype" : "app";
+    </script>
+    <style>
+      html[data-display="app"] [data-dev-only] {
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+    </style>
+    <link rel="stylesheet" href="./styles.css?v=guide-price-inline-20260613&cache-bust=guide-messages-readall-20260622" />
+  </head>
+  <body>
+    <div class="prototype-shell">
+      <aside class="screen-nav" aria-label="界面列表" data-dev-only hidden aria-hidden="true">
+        <div class="brand-block">
+          <div class="mini-robot" aria-hidden="true">
+            <span></span>
+          </div>
+          <div>
+            <strong>云旅无忧</strong>
+            <small>向导端页面参考实现</small>
+          </div>
+        </div>
+        <div class="nav-actions">
+          <button type="button" data-step="-1" data-action="上一页">上一页</button>
+          <button type="button" data-step="1" data-action="下一页">下一页</button>
+        </div>
+        <div id="screenList" class="screen-list"></div>
+      </aside>
+
+      <main class="phone-stage">
+        <div class="phone-meta" data-dev-only hidden aria-hidden="true">
+          <span id="currentName">01-接单大厅</span>
+          <span>390 × 844</span>
+        </div>
+        <section id="phone" class="phone" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <script defer src="/shared/business-bridge.js?v=20260616-no-fake-green-feedback"></script>
+    <script defer src="./app.js?v=guide-no-fake-green-feedback-20260616&compat=app.js?v=guide-price-inline-20260613&cache-bust=guide-messages-readall-20260622"></script>
+    <script defer src="/shared/robustness-state.js?v=20260612-empty-error"></script>
+  </body>
+</html>

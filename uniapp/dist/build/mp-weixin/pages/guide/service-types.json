@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "服务类型设置",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

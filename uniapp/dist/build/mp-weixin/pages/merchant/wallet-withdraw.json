@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "我的钱包提现",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

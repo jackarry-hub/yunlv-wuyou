@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "活动报名",
+  "usingComponents": {
+    "yl-primary-button": "../../components/YlPrimaryButton",
+    "yl-card": "../../components/YlCard",
+    "yl-page": "../../components/YlPage"
+  }
+}

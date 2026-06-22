@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "评价售后",
+  "usingComponents": {
+    "yl-status-pill": "../../components/YlStatusPill",
+    "yl-card": "../../components/YlCard",
+    "yl-page": "../../components/YlPage"
+  }
+}

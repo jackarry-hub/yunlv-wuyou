@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "人工向导",
+  "usingComponents": {
+    "yl-user-reference-page": "../../components/YlUserReferencePage"
+  }
+}

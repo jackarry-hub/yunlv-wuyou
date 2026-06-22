@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "扫码核验",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

@@ -1,0 +1,2 @@
+page{min-height:100%;background:#f4f9ff;color:#111827;font-family:-apple-system,BlinkMacSystemFont,PingFang SC,Helvetica Neue,Arial,sans-serif;font-size:28rpx;line-height:1.42;-webkit-font-smoothing:antialiased}button{box-sizing:border-box;padding:0;margin:0;border:0;background:transparent;color:inherit;font:inherit;line-height:1.2}button:after{border:0}
+page{--status-bar-height:25px;--top-window-height:0px;--window-top:0px;--window-bottom:0px;--window-left:0px;--window-right:0px;--window-magin:0px}[data-c-h="true"]{display: none !important;}

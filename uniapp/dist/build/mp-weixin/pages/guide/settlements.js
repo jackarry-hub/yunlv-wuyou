@@ -1,0 +1,1 @@
+"use strict";const e=require("../../common/vendor.js"),r={};if(!Array){e.resolveComponent("YlRoleReferencePage")()}Math;const t=e._export_sfc(r,[["render",function(r,t){return{a:e.p({role:"guide","page-id":"settlements"})}}]]);wx.createPage(t);

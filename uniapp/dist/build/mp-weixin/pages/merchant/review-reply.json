@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "评价回复",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

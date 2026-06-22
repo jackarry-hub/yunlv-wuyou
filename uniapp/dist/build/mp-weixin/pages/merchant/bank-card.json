@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "绑定银行卡",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "接单筛选",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

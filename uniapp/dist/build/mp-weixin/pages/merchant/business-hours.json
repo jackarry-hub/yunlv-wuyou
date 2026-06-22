@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "营业时间设置",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "交通出行",
+  "usingComponents": {
+    "yl-user-reference-page": "../../components/YlUserReferencePage"
+  }
+}

@@ -1,0 +1,1 @@
+"use strict";const e=require("../../common/vendor.js"),r={};if(!Array){e.resolveComponent("YlRoleReferencePage")()}Math;const n=e._export_sfc(r,[["render",function(r,n){return{a:e.p({role:"merchant","page-id":"security"})}}]]);wx.createPage(n);

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "活动日历",
+  "usingComponents": {
+    "yl-card": "../../components/YlCard",
+    "yl-status-pill": "../../components/YlStatusPill",
+    "yl-primary-button": "../../components/YlPrimaryButton",
+    "yl-page": "../../components/YlPage"
+  }
+}

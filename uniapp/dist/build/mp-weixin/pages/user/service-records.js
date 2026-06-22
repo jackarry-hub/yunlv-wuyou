@@ -1,0 +1,1 @@
+"use strict";const e=require("../../common/vendor.js"),r={};if(!Array){e.resolveComponent("YlUserReferencePage")()}Math;const n=e._export_sfc(r,[["render",function(r,n){return{a:e.p({"page-id":"service-records"})}}]]);wx.createPage(n);

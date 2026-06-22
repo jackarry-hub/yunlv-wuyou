@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "上线接单",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

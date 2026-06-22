@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "待确认订单详情",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

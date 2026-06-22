@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>云旅无忧商户端</title>
+    <script>
+      document.documentElement.dataset.display = location.pathname.startsWith("/prototype/") ? "prototype" : "app";
+    </script>
+    <link rel="stylesheet" href="./styles.css?v=merchant-mobile-shell-20260620" />
+    <script defer src="/shared/business-bridge.js?v=20260616-no-fake-green-feedback"></script>
+    <script defer src="./app.js?v=merchant-mobile-shell-20260620"></script>
+    <script async src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" onload="window.lucide && window.lucide.createIcons && window.lucide.createIcons()"></script>
+    <script defer src="/shared/robustness-state.js?v=20260612-empty-error"></script>
+  </head>
+  <body>
+    <main class="prototype-shell">
+      <aside class="screen-panel" aria-label="页面列表" data-dev-only>
+        <div class="panel-title">
+          <img src="./assets/brand-logo.png" alt="" />
+          <div>
+            <strong>云旅无忧商户端</strong>
+            <span>70 个业务页面参考实现</span>
+          </div>
+        </div>
+        <label class="search-box">
+          <i data-lucide="search"></i>
+          <input id="screenSearch" type="search" placeholder="搜索页面名称" />
+        </label>
+        <nav id="screenList" class="screen-list"></nav>
+      </aside>
+
+      <section class="stage" aria-label="移动端预览">
+        <div class="stage-toolbar" data-dev-only>
+          <div>
+            <span id="screenCounter"></span>
+            <strong id="currentScreenName"></strong>
+          </div>
+          <button id="resetScreen" class="ghost-button" type="button">
+            <i data-lucide="rotate-ccw"></i>
+            首页
+          </button>
+        </div>
+        <div id="phone" class="phone" aria-live="polite"></div>
+      </section>
+
+      <aside class="notes-panel" data-dev-only>
+        <h1>实现说明</h1>
+        <p>
+          根据当前文件夹中的商户端参考图抽象出浅蓝背景、白色信息卡片、蓝色主按钮、状态标签、步骤条、底部五栏导航等组件。
+          页面内容由 JavaScript 数据渲染，便于继续扩展成真实业务流程。
+        </p>
+        <div class="legend">
+          <span><b class="dot blue"></b>核心首页</span>
+          <span><b class="dot green"></b>表单与资料</span>
+          <span><b class="dot orange"></b>订单/财务</span>
+          <span><b class="dot purple"></b>设置/客服</span>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>

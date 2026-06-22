@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "今日收入",
+  "usingComponents": {
+    "yl-card": "../../components/YlCard",
+    "yl-page": "../../components/YlPage"
+  }
+}

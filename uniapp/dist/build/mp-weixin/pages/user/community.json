@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "社群交流",
+  "usingComponents": {
+    "yl-user-reference-page": "../../components/YlUserReferencePage"
+  }
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>云旅无忧用户端</title>
+    <script>
+      document.documentElement.dataset.display = location.pathname.startsWith("/prototype/") ? "prototype" : "app";
+    </script>
+    <style>
+      html[data-display="app"] [data-dev-only] {
+        display: none !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+    </style>
+    <link rel="stylesheet" href="./styles.css?v=user-mobile-shell-20260620&cache-bust=user-health-services-layout-fix-20260621" />
+  </head>
+  <body>
+    <main class="prototype">
+      <aside class="screen-rail" aria-label="页面导航" data-dev-only hidden aria-hidden="true">
+        <div class="rail-brand">
+          <span class="brand-mark"></span>
+          <div>
+            <strong>云旅无忧</strong>
+            <small>用户端代码实现</small>
+          </div>
+        </div>
+        <div id="screenNav" class="screen-nav"></div>
+      </aside>
+
+      <section class="workspace">
+        <div class="mobile-switcher" id="mobileSwitcher" data-dev-only hidden aria-hidden="true"></div>
+        <div class="phone-shell" aria-label="移动端预览">
+          <div class="phone" id="app"></div>
+        </div>
+      </section>
+    </main>
+
+    <script async src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" onload="window.lucide && window.lucide.createIcons && window.lucide.createIcons()"></script>
+    <script defer src="/shared/business-bridge.js?v=20260616-no-fake-green-feedback"></script>
+    <script defer src="./app.js?v=user-transport-real-api-20260620&route-cache=app.js?v=user-route-boundary-20260613&policy=user-policy-search-filter-20260621&ime=user-policy-search-ime-20260621&device-auth=user-device-auth-no-device-20260621&shop=user-shop-real-api-20260620&volunteer=user-volunteer-real-api-20260620&cache-bust=user-policy-search-20260621"></script>
+    <script defer src="/shared/robustness-state.js?v=20260612-empty-error"></script>
+  </body>
+</html>

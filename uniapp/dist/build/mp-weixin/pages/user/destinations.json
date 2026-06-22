@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "旅居目的地",
+  "usingComponents": {
+    "yl-user-reference-page": "../../components/YlUserReferencePage"
+  }
+}

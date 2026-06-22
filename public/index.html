@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>云旅无忧全端业务工作台</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script defer src="/app.js?v=20260601-auth"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <strong>云旅无忧</strong>
+            <small>AI 智慧旅居平台</small>
+          </div>
+        </div>
+        <nav class="side-nav" aria-label="项目端口">
+          <a href="/user/"><i data-lucide="smartphone"></i><span>用户端</span></a>
+          <a href="/guide/"><i data-lucide="map-pinned"></i><span>向导端</span></a>
+          <a href="/merchant/"><i data-lucide="store"></i><span>商户端</span></a>
+          <a href="/admin/" target="_blank" rel="noreferrer"><i data-lucide="monitor-cog"></i><span>管理后台</span></a>
+        </nav>
+        <div class="side-meta">
+          <span>本地服务</span>
+          <strong id="serviceStatus">检测中</strong>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">全端运营工作台</p>
+            <h1>四端真实业务工作台</h1>
+          </div>
+          <div class="top-actions">
+            <a class="button ghost" href="/api/health" target="_blank" rel="noreferrer"><i data-lucide="activity"></i>API 状态</a>
+            <button class="button" id="refreshData" type="button"><i data-lucide="refresh-cw"></i>刷新</button>
+          </div>
+        </header>
+
+        <section class="endpoint-grid" aria-label="端口入口">
+          <article class="endpoint-card">
+            <img src="/ui-ref/用户端/07-首页.png" alt="用户端首页参考" />
+            <div>
+              <span class="tag green">H5 验收</span>
+              <h2>用户端</h2>
+              <p>档案、健康设备、AI 管家、活动报名、服务下单、SOS、订单确认。</p>
+              <a href="/user/">打开用户端 <i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </article>
+          <article class="endpoint-card">
+            <img src="/ui-ref/向导端/14-首页.png" alt="向导端首页参考" />
+            <div>
+              <span class="tag blue">H5 验收</span>
+              <h2>人工向导端</h2>
+              <p>上线状态、派单任务、接单、开始服务、完成上报、消息通知。</p>
+              <a href="/guide/">打开向导端 <i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </article>
+          <article class="endpoint-card">
+            <img src="/ui-ref/商户端/24-首页工作台.png" alt="商户端工作台参考" />
+            <div>
+              <span class="tag orange">H5 验收</span>
+              <h2>商户端</h2>
+              <p>商户资料、服务项目、预约报价、确认服务、完成上报、结算消息。</p>
+              <a href="/merchant/">打开商户端 <i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </article>
+          <article class="endpoint-card">
+            <img src="/ui-ref/管理后台/01-数据概览.png" alt="管理后台数据概览参考" />
+            <div>
+              <span class="tag purple">53 页</span>
+              <h2>管理后台</h2>
+              <p>用户、向导、商户、订单、调度、异常、设备、内容、权限。</p>
+              <a href="/admin/" target="_blank" rel="noreferrer">打开后台 <i data-lucide="arrow-up-right"></i></a>
+            </div>
+          </article>
+        </section>
+
+        <section class="metric-grid" id="metricGrid" aria-label="核心指标"></section>
+
+        <section class="work-grid">
+          <article class="panel flow-panel">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">业务流转</p>
+                <h2>服务订单闭环</h2>
+              </div>
+              <span class="pill">接口流程已接入</span>
+            </div>
+            <div class="flow-actions">
+              <button type="button" data-action="createOrder"><i data-lucide="file-plus-2"></i>用户下单</button>
+              <button type="button" data-action="dispatchOrder"><i data-lucide="route"></i>后台派单</button>
+              <button type="button" data-action="acceptTask"><i data-lucide="check-circle-2"></i>向导接单</button>
+              <button type="button" data-action="startTask"><i data-lucide="navigation"></i>开始服务</button>
+              <button type="button" data-action="completeTask"><i data-lucide="upload-cloud"></i>完成上报</button>
+              <button type="button" data-action="confirmOrder"><i data-lucide="star"></i>用户确认</button>
+              <button type="button" class="danger" data-action="triggerSos"><i data-lucide="siren"></i>触发 SOS</button>
+            </div>
+            <ol class="event-log" id="eventLog"></ol>
+          </article>
+
+          <article class="panel ai-panel">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">AI 管家</p>
+                <h2>问答与推荐</h2>
+              </div>
+            </div>
+            <form id="aiForm" class="ai-form">
+              <input id="aiQuestion" name="question" type="text" value="今天附近有什么适合参加的活动？" />
+              <button type="submit"><i data-lucide="send"></i></button>
+            </form>
+            <div class="ai-answer" id="aiAnswer"></div>
+          </article>
+        </section>
+
+        <section class="data-grid">
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">订单</p>
+                <h2>最新订单</h2>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>订单号</th>
+                    <th>服务</th>
+                    <th>执行方</th>
+                    <th>状态</th>
+                    <th>金额</th>
+                  </tr>
+                </thead>
+                <tbody id="orderRows"></tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">异常</p>
+                <h2>风险与 SOS</h2>
+              </div>
+            </div>
+            <div class="alert-list" id="alertList"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "售后处理记录",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

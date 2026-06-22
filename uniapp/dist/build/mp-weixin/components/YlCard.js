@@ -1,0 +1,1 @@
+"use strict";const t=require("../common/vendor.js"),e={__name:"YlCard",props:{title:{type:String,default:""}},setup:e=>(o,s)=>t.e({a:e.title||o.$slots.action},e.title||o.$slots.action?t.e({b:e.title},e.title?{c:t.t(e.title)}:{}):{})},o=t._export_sfc(e,[["__scopeId","data-v-9d8355db"]]);wx.createComponent(o);

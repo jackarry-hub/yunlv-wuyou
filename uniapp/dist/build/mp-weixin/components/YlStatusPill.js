@@ -1,0 +1,1 @@
+"use strict";const t=require("../common/vendor.js"),e={__name:"YlStatusPill",props:{text:{type:String,required:!0},tone:{type:String,default:"blue"}},setup:e=>(n,o)=>({a:t.t(e.text),b:t.n(`yl-pill--${e.tone}`)})},n=t._export_sfc(e,[["__scopeId","data-v-23cb2b4a"]]);wx.createComponent(n);

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "yl-role-tabs": "./YlRoleTabs"
+  }
+}

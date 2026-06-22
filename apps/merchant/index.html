@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>云旅无忧商户端</title>
+    <link rel="stylesheet" href="/shared/styles.css?v=20260608-statusbar" />
+    <script defer src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script type="module" src="/merchant/app.js?v=20260613-merchant-start-flow"></script>
+  </head>
+  <body>
+    <div class="role-shell">
+      <header class="app-top">
+        <a class="brand-mini" href="/merchant/">
+          <span class="brand-mark">云</span>
+          <span>
+            <strong>云旅无忧</strong>
+            <span>商户端</span>
+          </span>
+        </a>
+        <nav class="role-links" aria-label="商户端导航">
+          <span class="icon-link active" aria-current="page"><i data-lucide="store"></i>商户</span>
+        </nav>
+      </header>
+      <main id="app" class="app-main" aria-live="polite"></main>
+    </div>
+    <div class="toast" data-toast></div>
+  </body>
+</html>

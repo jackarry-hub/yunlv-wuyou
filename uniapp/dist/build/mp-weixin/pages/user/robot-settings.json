@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "机器人设置",
+  "usingComponents": {
+    "yl-user-reference-page": "../../components/YlUserReferencePage"
+  }
+}

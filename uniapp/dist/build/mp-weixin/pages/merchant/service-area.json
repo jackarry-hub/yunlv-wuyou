@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "服务范围选择",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

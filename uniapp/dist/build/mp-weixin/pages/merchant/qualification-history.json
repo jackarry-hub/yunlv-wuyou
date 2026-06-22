@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "资质更新记录",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

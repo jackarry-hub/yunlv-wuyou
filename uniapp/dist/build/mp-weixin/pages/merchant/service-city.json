@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "服务城市选择",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

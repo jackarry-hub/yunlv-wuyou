@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "工单记录",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

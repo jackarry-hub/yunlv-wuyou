@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "求助记录",
+  "usingComponents": {
+    "yl-user-reference-page": "../../components/YlUserReferencePage"
+  }
+}

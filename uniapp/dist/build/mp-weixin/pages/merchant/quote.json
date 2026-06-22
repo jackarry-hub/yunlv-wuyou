@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "报价确认",
+  "usingComponents": {
+    "yl-card": "../../components/YlCard",
+    "yl-primary-button": "../../components/YlPrimaryButton",
+    "yl-page": "../../components/YlPage"
+  }
+}

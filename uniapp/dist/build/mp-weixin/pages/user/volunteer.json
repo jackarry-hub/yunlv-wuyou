@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "志愿服务",
+  "usingComponents": {
+    "yl-user-reference-page": "../../components/YlUserReferencePage"
+  }
+}

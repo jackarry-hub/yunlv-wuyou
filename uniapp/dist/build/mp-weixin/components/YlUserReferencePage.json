@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "yl-primary-button": "./YlPrimaryButton",
+    "yl-card": "./YlCard",
+    "yl-order-card": "./YlOrderCard",
+    "yl-page": "./YlPage",
+    "yl-action-grid": "./YlActionGrid",
+    "yl-status-pill": "./YlStatusPill"
+  }
+}

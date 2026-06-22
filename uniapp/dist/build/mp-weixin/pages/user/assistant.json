@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "人工向导",
+  "usingComponents": {
+    "yl-primary-button": "../../components/YlPrimaryButton",
+    "yl-card": "../../components/YlCard",
+    "yl-action-grid": "../../components/YlActionGrid",
+    "yl-page": "../../components/YlPage"
+  }
+}

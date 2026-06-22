@@ -1,0 +1,1 @@
+<button class="{{['yl-btn', 'data-v-ae8c3709', b && 'yl-btn--ghost', c && 'yl-btn--danger']}}" disabled="{{d}}" bindtap="{{e}}"><text class="data-v-ae8c3709">{{a}}</text></button>

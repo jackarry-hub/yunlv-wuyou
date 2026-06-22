@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "已接单待出发",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

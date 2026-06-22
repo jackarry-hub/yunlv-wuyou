@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的",
+  "usingComponents": {
+    "yl-card": "../../components/YlCard",
+    "yl-primary-button": "../../components/YlPrimaryButton",
+    "yl-action-grid": "../../components/YlActionGrid",
+    "yl-page": "../../components/YlPage"
+  }
+}

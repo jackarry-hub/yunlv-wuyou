@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: yunlv-wuyou-mvp
+    runtime: node
+    plan: free
+    buildCommand: npm run check
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: YUNLV_RUNTIME_DIR
+        value: /opt/render/project/src/.runtime
+      - key: YUNLV_SEED_DB
+        value: /opt/render/project/src/data/mock-db.json
+      - key: YUNLV_AUTH_SECRET
+        generateValue: true
+      - key: DEEPSEEK_API_KEY
+        sync: false
+      - key: DEEPSEEK_MODEL
+        value: deepseek-chat
+      - key: DEEPSEEK_API_BASE
+        value: https://api.deepseek.com

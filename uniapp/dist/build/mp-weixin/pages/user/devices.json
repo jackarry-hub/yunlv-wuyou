@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "智能设备",
+  "usingComponents": {
+    "yl-user-reference-page": "../../components/YlUserReferencePage"
+  }
+}

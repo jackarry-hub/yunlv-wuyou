@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选择开票订单",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

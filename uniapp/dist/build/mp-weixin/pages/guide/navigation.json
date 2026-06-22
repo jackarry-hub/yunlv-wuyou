@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "路线导航",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

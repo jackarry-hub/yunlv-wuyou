@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "提现申请",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

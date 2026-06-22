@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "小云机器人",
+  "usingComponents": {
+    "yl-user-reference-page": "../../components/YlUserReferencePage"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "手环设置",
+  "usingComponents": {
+    "yl-user-reference-page": "../../components/YlUserReferencePage"
+  }
+}

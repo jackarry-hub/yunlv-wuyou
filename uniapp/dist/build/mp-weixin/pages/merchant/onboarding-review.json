@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "商户入驻审核中",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

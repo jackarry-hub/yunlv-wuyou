@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "本地美食",
+  "usingComponents": {
+    "yl-user-reference-page": "../../components/YlUserReferencePage"
+  }
+}

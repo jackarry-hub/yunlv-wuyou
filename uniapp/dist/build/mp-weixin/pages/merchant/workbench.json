@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "商户工作台",
+  "usingComponents": {
+    "yl-card": "../../components/YlCard",
+    "yl-action-grid": "../../components/YlActionGrid",
+    "yl-order-card": "../../components/YlOrderCard",
+    "yl-page": "../../components/YlPage"
+  }
+}

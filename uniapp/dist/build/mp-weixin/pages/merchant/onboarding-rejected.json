@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "商户入驻审核驳回",
+  "usingComponents": {
+    "yl-role-reference-page": "../../components/YlRoleReferencePage"
+  }
+}

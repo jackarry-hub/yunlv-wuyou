@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "旅居打卡",
+  "usingComponents": {
+    "yl-user-reference-page": "../../components/YlUserReferencePage"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "yl-card": "./YlCard",
+    "yl-status-pill": "./YlStatusPill"
+  }
+}

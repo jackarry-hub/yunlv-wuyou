@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "yl-action-grid": "../../components/YlActionGrid",
+    "yl-card": "../../components/YlCard",
+    "yl-order-card": "../../components/YlOrderCard",
+    "yl-page": "../../components/YlPage"
+  }
+}

@@ -1,0 +1,14 @@
+.DS_Store
+._*
+*.bak-*
+.env
+.env.local
+node_modules/
+.runtime/
+artifacts/
+dist-preview/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+uniapp/.npm-cache/
+uniapp/dist/build/mp-weixin/project.private.config.json
