@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>云旅无忧 H5 宣传引导页</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="poster" aria-label="云旅无忧宣传引导页">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="brand-row">
+          <img class="brand-logo" src="./assets/logo-transparent.png" alt="云旅无忧 AI旅居智慧平台" />
+        </div>
+
+        <div class="hand-note" aria-label="遇见更好的旅居时光">
+          <span>遇见更好的旅居时光 ♡</span>
+        </div>
+
+        <h1 id="page-title" class="title">
+          <span>旅居</span><span>不再陌生</span>
+        </h1>
+
+        <div class="subtitle">
+          <span>扫码了解项目，观看宣传片，并体验平台服务</span>
+        </div>
+      </section>
+
+      <section class="video-section" aria-label="宣传片">
+        <div class="video-card">
+          <video
+            id="promoVideo"
+            controls
+            playsinline
+            webkit-playsinline
+            preload="metadata"
+            poster="./assets/video-cover.jpg"
+          >
+            <source src="./assets/promo.mp4" type="video/mp4" />
+            您的浏览器暂不支持视频播放。
+          </video>
+          <button class="video-play" type="button" aria-label="播放宣传片">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <circle cx="32" cy="32" r="30"></circle>
+              <path d="M26 20l20 12-20 12z"></path>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="actions" aria-label="操作入口">
+        <a class="primary-btn" href="http://47.109.79.175/user/">
+          <span>立即体验云旅无忧</span>
+          <i aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 5l7 7-7 7" />
+            </svg>
+          </i>
+        </a>
+
+        <button class="secondary-btn" type="button" data-scroll-target="#highlights">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M10 8l6 4-6 4z"></path>
+          </svg>
+          <span>观看项目亮点</span>
+        </button>
+      </section>
+
+      <section id="highlights" class="highlights" aria-label="项目亮点">
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M8 17l11-5 11 5 10-5v25l-10 5-11-5-11 5z" />
+                <path d="M19 12v25M30 17v25" />
+                <path d="M24 6c-5 0-9 4-9 9 0 7 9 17 9 17s9-10 9-17c0-5-4-9-9-9z" />
+                <circle cx="24" cy="15" r="3" />
+              </svg>
+            </span>
+            <div>
+              <h2>活动地图</h2>
+              <p>智能推荐 轻松探索</p>
+            </div>
+          </div>
+          <img src="./assets/feature-activity.jpg" alt="活动地图" />
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M15 24c0-7 4-12 9-12s9 5 9 12" />
+                <path d="M13 24h4v10h-4a4 4 0 0 1-4-4v-2a4 4 0 0 1 4-4zM35 24h-4v10h4a4 4 0 0 0 4-4v-2a4 4 0 0 0-4-4z" />
+                <circle cx="24" cy="24" r="7" />
+                <path d="M17 39c2-5 12-5 14 0" />
+                <path d="M21 24h.1M27 24h.1M21 29c2 2 4 2 6 0" />
+              </svg>
+            </span>
+            <div>
+              <h2>人工向导</h2>
+              <p>在地向导 贴心陪伴</p>
+            </div>
+          </div>
+          <img src="./assets/feature-guide.jpg" alt="人工向导" />
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <rect x="12" y="14" width="24" height="24" rx="4" />
+                <path d="M18 14v-5h12v5" />
+                <path d="M24 21v10M19 26h10" />
+              </svg>
+            </span>
+            <div>
+              <h2>陪伴就医</h2>
+              <p>预约陪诊 安心就医</p>
+            </div>
+          </div>
+          <img src="./assets/feature-medical.jpg" alt="陪伴就医" />
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <rect x="15" y="7" width="18" height="34" rx="5" />
+                <path d="M20 12h8M21 36h6" />
+                <path d="M18 25h5l3-7 4 14 3-7h4" />
+              </svg>
+            </span>
+            <div>
+              <h2>健康监测</h2>
+              <p>实时监测 健康护航</p>
+            </div>
+          </div>
+          <img src="./assets/feature-health.jpg" alt="健康监测" />
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M24 6l16 7v11c0 10-7 16-16 19-9-3-16-9-16-19V13z" />
+                <path d="M17 26c0-4 3-7 7-7s7 3 7 7-3 7-7 7" />
+                <path d="M24 33v3" />
+                <path d="M20 26h8" />
+              </svg>
+            </span>
+            <div>
+              <h2>紧急求助</h2>
+              <p>一键求助 快速响应</p>
+            </div>
+          </div>
+          <img src="./assets/feature-sos.jpg" alt="紧急求助" />
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-head">
+            <span class="feature-icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="19" cy="17" r="7" />
+                <circle cx="32" cy="21" r="6" />
+                <path d="M7 39c2-8 21-8 24 0" />
+                <path d="M26 39c1-5 12-6 15 0" />
+              </svg>
+            </span>
+            <div>
+              <h2>亲情连线</h2>
+              <p>远程关怀 温暖相伴</p>
+            </div>
+          </div>
+          <img src="./assets/feature-family.jpg" alt="亲情连线" />
+        </article>
+      </section>
+
+      <section class="assurance" aria-label="安心服务说明">
+        <span class="heart-badge" aria-hidden="true">♥</span>
+        <p>为银发旅居人群提供有方向、有陪伴、有守护的安心服务。</p>
+        <span class="heart-line" aria-hidden="true">♡</span>
+      </section>
+    </main>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
