@@ -1,0 +1,98 @@
+name: Transcode Promo Video
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "promo/assets/promo-source.mp4"
+      - ".github/workflows/transcode-promo-video.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  transcode:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Ensure FFmpeg
+        run: |
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y ffmpeg
+          fi
+          ffmpeg -version
+
+      - name: Transcode promo video
+        shell: bash
+        run: |
+          set -euo pipefail
+          SOURCE="promo/assets/promo-source.mp4"
+          OUTPUT="promo/assets/promo.mp4"
+          TEMP_OUTPUT="promo/assets/promo.tmp.mp4"
+
+          if [ ! -f "$SOURCE" ]; then
+            echo "Missing source video: $SOURCE"
+            exit 1
+          fi
+
+          encode() {
+            local bitrate="$1"
+            local maxrate="$2"
+            rm -f "$TEMP_OUTPUT"
+            ffmpeg -y -i "$SOURCE" \
+              -map 0:v:0 -map 0:a? \
+              -c:v libx264 \
+              -profile:v high \
+              -level 4.2 \
+              -pix_fmt yuv420p \
+              -r 30 \
+              -b:v "$bitrate" \
+              -maxrate "$maxrate" \
+              -bufsize 20M \
+              -preset slow \
+              -movflags +faststart \
+              -c:a aac \
+              -b:a 160k \
+              -ar 48000 \
+              "$TEMP_OUTPUT"
+          }
+
+          encode 8M 10M
+          size=$(stat -c%s "$TEMP_OUTPUT")
+          if [ "$size" -gt 95000000 ]; then
+            encode 7M 9M
+            size=$(stat -c%s "$TEMP_OUTPUT")
+          fi
+          if [ "$size" -gt 95000000 ]; then
+            encode 6M 8M
+            size=$(stat -c%s "$TEMP_OUTPUT")
+          fi
+          if [ "$size" -gt 95000000 ]; then
+            echo "Encoded video is still too large for normal GitHub file limits: $size bytes"
+            exit 1
+          fi
+
+          mv "$TEMP_OUTPUT" "$OUTPUT"
+          ffprobe -v error -select_streams v:0 \
+            -show_entries stream=codec_name,width,height,r_frame_rate,pix_fmt \
+            -of default=noprint_wrappers=1 "$OUTPUT"
+
+      - name: Commit transcoded video
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add promo/assets/promo.mp4
+          if git diff --cached --quiet; then
+            echo "No transcoded video changes to commit."
+          else
+            git commit -m "Transcode promo video for mobile playback"
+            git push
+          fi
