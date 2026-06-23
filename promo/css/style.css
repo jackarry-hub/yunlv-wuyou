@@ -61,7 +61,7 @@ a {
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.12)),
-    url("../assets/bg-poster.png") top center / 100% auto no-repeat;
+    url("../assets/bg-poster.jpg") top center / 100% auto no-repeat;
   border: 1px solid rgba(22, 57, 93, 0.08);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
 }
@@ -306,7 +306,8 @@ a {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center center;
   background: #dfeef9;
 }
 
