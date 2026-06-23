@@ -18,13 +18,27 @@
       videoCard.classList.toggle("is-playing", !video.paused && !video.ended);
     };
 
-    playButton.addEventListener("click", function () {
+    var playVideo = function () {
       var playPromise = video.play();
       if (playPromise && typeof playPromise.catch === "function") {
-        playPromise.catch(function () {
-          video.controls = true;
-        });
+        playPromise.catch(syncPlayState);
       }
+    };
+
+    var toggleVideo = function () {
+      if (video.paused || video.ended) {
+        playVideo();
+      } else {
+        video.pause();
+      }
+    };
+
+    playButton.addEventListener("click", function () {
+      playVideo();
+    });
+
+    video.addEventListener("click", function () {
+      toggleVideo();
     });
 
     video.addEventListener("play", syncPlayState);
